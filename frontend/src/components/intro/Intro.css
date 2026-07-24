@@ -1,0 +1,260 @@
+.intro-container{
+    width:100%;
+    height:100vh;
+
+    background:#050816;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.intro-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+    position:relative;
+z-index:10;
+
+}
+
+.title{
+
+    font-size:110px;
+
+    font-weight:900;
+
+    color:white;
+
+    margin:0;
+
+}
+
+.title span{
+
+    background:linear-gradient(
+        90deg,
+        #00F5FF,
+        #00FF95,
+        #FFD600,
+        #FF6B00,
+        #FF0099,
+        #8A2BE2
+    );
+      background-clip: text;
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.hero-line{
+
+    margin-top:20px;
+
+    font-size:70px;
+
+    font-weight:800;
+
+    background:linear-gradient(
+        90deg,
+        #00F5FF,
+        #FFD600,
+        #00FF95,
+        #FF0099
+    );
+background-clip: text;
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.subtitle{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:24px;
+
+    line-height:40px;
+
+    opacity:.9;
+
+}
+/* =========================
+   PURPLE GLOW
+========================= */
+
+.glow{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(140,82,255,.35) 0%,
+    rgba(140,82,255,.18) 35%,
+    rgba(140,82,255,.05) 65%,
+    transparent 100%);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    filter:blur(80px);
+
+    z-index:0;
+
+    animation:glowMove 6s ease-in-out infinite;
+}
+
+@keyframes glowMove{
+
+0%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.15);
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+/* ==========================
+   STARS
+========================== */
+
+.stars{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+}
+
+.stars::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+    radial-gradient(circle,#ffffff 1px,transparent 1.5px);
+
+    background-size:
+
+    180px 180px,
+
+    220px 220px,
+
+    260px 260px,
+
+    300px 300px,
+
+    340px 340px,
+
+    400px 400px,
+
+    500px 500px,
+
+    650px 650px;
+
+    animation:twinkle 5s linear infinite;
+
+    opacity:.9;
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.45;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.45;
+
+}
+
+}
+/* ==============================
+   PLANET HORIZON
+============================== */
+
+.planet{
+
+    position:absolute;
+
+    bottom:-240px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle at center,
+    #31135b 0%,
+    #1c1038 45%,
+    #0b0d1f 80%);
+
+    box-shadow:
+    0 -10px 80px rgba(153,0,255,.45),
+    0 -3px 20px rgba(255,255,255,.18);
+
+    z-index:1;
+
+}
